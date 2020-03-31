@@ -225,7 +225,7 @@ nav {
 }
 
 .navbar-inverse {
-  background: #20364c;
+  background: teal; /*#20364c;*/
 }
 
 .navbar-brand {
