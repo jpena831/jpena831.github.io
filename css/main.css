@@ -5,6 +5,10 @@ body {
   background: #FFFFFF;
 }
 
+#side-container{
+  width:200px;
+}
+
 /* Colors */
 .dark-blue {
   color: #20364c !important;
