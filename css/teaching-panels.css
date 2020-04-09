@@ -38,6 +38,7 @@ color: black;
 
 .panel-default a[aria-expanded="true"] {
 color: black;
+  background-color: red;
 }
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
