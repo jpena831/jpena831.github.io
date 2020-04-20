@@ -6,7 +6,8 @@ body {
 }
 
 #news{
-  background-color:rgba(0,0,0,0.7);
+  /*background-color:rgba(0,0,0,0.7);*/
+  background-color:rgba(255, 255, 255, .5);
 }
 
 /* Colors */
