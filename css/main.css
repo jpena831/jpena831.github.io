@@ -5,6 +5,10 @@ body {
   background: #FFFFFF;
 }
 
+#col-sm-3{
+  background-color:rgba(0,0,0,0.7);
+}
+
 /* Colors */
 .dark-blue {
   color: #20364c !important;
