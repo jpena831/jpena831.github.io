@@ -49,6 +49,13 @@ $(document).ready(function() {
 
      });
 
+     $('ul.expander li').expander({
+      slicePoint: 50,
+      widow: 2,
+      expandEffect: 'show',
+      userCollapseText: '[^]'
+    });
+
      // popover function
      $('[data-toggle="popover"]').popover();
 
