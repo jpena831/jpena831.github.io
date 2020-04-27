@@ -6,12 +6,12 @@ body {
 }
 
 ul#news{
-  /*background-color:rgba(0,0,0,0.7);*/
-  background-color:rgba(255, 255, 255, .5);
+  /*background-color:rgba(0,0,0,0.7);
+  background-color:rgba(255, 255, 255, .5);*/
   list-style-type:none;
 }
 
-ul#news li::before {
+ul#news li:before {
  content: "\f621";
  font-family: "Font Awesome 5 Free";
 }
