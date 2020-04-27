@@ -13,6 +13,7 @@ ul#news{
 
 ul#news li::before {
  content: "\f621";
+ font-family: "Font Awesome 5 Free";
 }
 
 /* Colors */
