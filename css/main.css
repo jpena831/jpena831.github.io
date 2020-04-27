@@ -10,6 +10,7 @@ ul#news{
   background-color:rgba(255, 255, 255, .5);*/
   list-style-type:none;
   white-space: pre-line;
+  margin-top: -70px;
 }
 
 ul#news li:before {
