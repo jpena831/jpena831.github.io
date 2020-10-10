@@ -35,12 +35,12 @@ padding-bottom: 0;
 .panel-default .in {
 padding-top: 0 !important;
 color: black;
-     background-color:blue;
+     /*background-color:blue;*/
 }
 
 .panel-default a[aria-expanded="true"] {
 color: black;
-     background-color: red;
+     /*background-color: red;*/
 }
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
