@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/joslennep/respositories/jpena831hub.io.git
+    - export DEPLOYPATH=/home/joslennep/repositories/jpena831hub.io.git
     - /bin/cp -R images $DEPLOYPATH
