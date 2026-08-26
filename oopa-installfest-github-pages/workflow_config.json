@@ -1,0 +1,178 @@
+{
+  "workflow": {
+    "title": "Comp 127 Installfest and Environment Setup (VS Code)",
+    "startStep": "welcome",
+    "steps": {
+      "welcome": {
+        "title": "Installation and Setup for Comp 127",
+        "contentFile": "step-welcome.html",
+        "type": "info",
+        "actions": [
+          {
+            "label": "Create your accounts",
+            "nextStep": "create-account-github"
+          }
+        ]
+      },
+
+      "create-account-github": {
+        "title": "Get a GitHub Account",
+        "contentFile": "create-account-github.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Get a Macalester MSCS Slack account",
+            "nextStep": "create-account-slack"
+          }
+        ]
+      },
+
+      "create-account-slack": {
+        "title": "Get a Macalester MSCS Slack Account",
+        "contentFile": "create-account-slack.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Send us your account info",
+            "nextStep": "send-account-info"
+          }
+        ]
+      },
+
+      "send-account-info": {
+        "title": "Send us your GitHub and Slack accounts",
+        "contentFile": "send-account-info.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Start installing required software",
+            "nextStep": "choose-os",
+            "startDisabled": true
+          }
+        ]
+      },
+
+      "choose-os": {
+        "title": "What kind of computer are you using?",
+        "contentFile": "choose-os.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Install Java",
+            "nextStep": "install-java"
+          }
+        ]
+      },
+
+      "install-java": {
+        "title": "Install Java",
+        "contentFile": "install-java.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Install VS Code",
+            "nextStep": "install-vs-code"
+          }
+        ]
+      },
+
+      "install-vs-code": {
+        "title": "Install Visual Studio Code",
+        "contentFile": "install-vs-code.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Configure VS Code",
+            "nextStep": "configure-vs-code"
+          }
+        ]
+      },
+
+      "configure-vs-code": {
+        "title": "Configure VS Code",
+        "contentFile": "configure-vs-code.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Install Git",
+            "nextStep": "install-git"
+          }
+        ]
+      },
+
+      "install-git": {
+        "title": "Install Git",
+        "contentFile": "install-git.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Verify your git installation",
+            "nextStep": "verify-git"
+          }
+        ]
+      },
+
+      "verify-git": {
+        "title": "Verify your Git installation",
+        "contentFile": "verify-git.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Install GitHub Desktop",
+            "nextStep": "install-github-desktop"
+          }
+        ]
+      },
+
+      "install-github-desktop": {
+        "title": "Install GitHub Desktop",
+        "contentFile": "install-github-desktop.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Run your first Java project ",
+            "nextStep": "run-first-java-project"
+          }
+        ]
+      },
+
+      "run-first-java-project": {
+        "title": "Run your first Java project",
+        "contentFile": "run-first-java-project.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Final steps",
+            "nextStep": "final-steps"
+          }
+        ]
+      },
+
+      "setting-vs-code-java.home-win": {
+        "title": "Manually setting VS Code's java.home on Windows",
+        "contentFile": "setting-vs-code-java.home-win.html",
+        "type": "instructions",
+        "actions": []
+      },
+
+      "final-steps": {
+        "title": "Final steps",
+        "contentFile": "final-steps.html",
+        "type": "instructions",
+        "actions": [
+          {
+            "label": "Let us know what you think ",
+            "nextStep": "survey"
+          }
+        ]
+      },
+
+      "survey": {
+        "title": "Let us know what you think",
+        "contentFile": "survey.html",
+        "type": "instructions"
+      }
+
+    }
+  }
+}
