@@ -1,0 +1,382 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS variable for consistent backgrounds in <code> elements, inline or inside <pre> */
+:root {
+  --code-bg: #f7fafc;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  justify-content: flex-end;
+}
+
+.step-list {
+    width: 400px;
+    flex-shrink: 0;
+    font-size: 85%;
+}
+
+.step-content {
+    width: 750px;
+}
+
+.workflow-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  //width: 100%;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Step header */
+.step-header {
+  margin-bottom: 30px;
+}
+
+.step-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.step-content {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.step-content h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.step-content h3 {
+  color: #4a5568;
+  margin: 20px 0 15px 0;
+  font-size: 18px;
+}
+
+.step-content ul,
+.step-content ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.step-content li {
+  margin: 8px 0;
+}
+
+.step-content a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.step-content a:hover {
+  text-decoration: underline;
+}
+
+.step-content code {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Monaco", "Consolas", monospace;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+}
+
+.step-content pre code {
+  background: transparent;
+  padding-left: 0px;
+  border: none;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+.step-content pre {
+  background: var(--code-bg);
+}
+
+/* Reminder boxes */
+.reminder {
+  background: #e6fffa;
+  border-left: 4px solid #38b2ac;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.reminder.urgent {
+  background: #fed7d7;
+  border-left-color: #f56565;
+}
+
+/* Actions and buttons */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.main-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-btn {
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  color: white;
+  min-width: 150px;
+}
+
+.action-btn-enabled {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.action-btn-disabled {
+  background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+  color: gray;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+  box-shadow: 0 4px 15px rgba(113, 128, 150, 0.3);
+  font-size: 14px;
+  min-width: 120px;
+  align-self: flex-start;
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  box-shadow: 0 8px 25px rgba(113, 128, 150, 0.4);
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* Loading state */
+.loading {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading.show {
+  display: block;
+}
+
+.spinner {
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .workflow-card {
+    padding: 25px;
+  }
+
+  .step-title {
+    font-size: 24px;
+  }
+
+  .main-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+
+  .back-btn {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+/* This seems to be the most standards-compliant, idiomatic way to say,
+   in HTML+CSS, "I want a blank line between this element the previous
+   one". Gotta love CSS's adjacent sibling combinator....
+ */
+p + p,
+p + div.reminder,
+div.this-platform + p,
+p + div.this-platform,
+div.other-platform + p,
+p + div.other-platform,
+p + pre,
+div.this-platform + div.other-platform,
+div.other-platform + div.this-platform,
+pre + p,
+details + p,
+p + dl,
+dl + p,
+p + blockquote,
+blockquote + p {
+  margin-top: 1em;
+}
+
+/* Classes for marking platform-specific content. No specific styling
+   right now; we use them for the semantics and functionality.
+ */
+.intel-mac {
+}
+.win {
+}
+.apple-silicon-mac {
+}
+
+.this-platform {
+}
+
+/* De-emphasize / dim / suppress content for the "other" platforms. We
+   could hide it entirely, but for now I'm not confident enough to do
+   that. So we just dim it out.
+ */
+.other-platform {
+  color: lightgray;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+/* The 0.9 opacity for images doesn't seem to match the text; turn it
+   down a bit more */
+.other-platform img {
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.other-platform img:hover {
+  opacity: 0.9;
+}
+
+/* Allow the user to more easily read that non-applicable content if
+   they hover.
+ */
+.other-platform:hover,
+.other-platform:focus-within {
+  color: gray;
+  opacity: 0.9;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+dd {
+  margin-left: 1em;
+}
+
+/* Styling for links on <li> elements to show a right-clickable 🔗 when
+   hovering:
+ */
+
+ol {
+  position: relative;
+}
+
+.anchor-link {
+  position: absolute;
+  left: -1.5em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+li:hover .anchor-link,
+li:focus-within .anchor-link,
+.anchor-link:focus {
+  opacity: 1;
+}
+
+.anchor-link::before {
+  content: "🔗";
+}

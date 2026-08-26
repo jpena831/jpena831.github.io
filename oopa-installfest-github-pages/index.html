@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VS Code Setup Workflow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="step-list workflow-card" id="stepList">
+        </div>
+
+      <div class="workflow-card">
+        <div id="start-over">
+          <button
+            class="action-btn back-btn"
+            onclick="window.workflowManager.startOverClick();"
+          >
+            Start over
+          </button>
+        </div>
+
+        <div id="workflowContent" style="display: none" class="step-content">
+          <div class="step-header">
+            <h1 class="step-title" id="stepTitle">Loading...</h1>
+          </div>
+
+          <div class="step-content" id="stepContent">
+            <p>Loading workflow content...</p>
+          </div>
+
+          <div class="actions" id="stepActions">
+            <!-- Action buttons will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="workflow.js"></script>
+  </body>
+</html>
