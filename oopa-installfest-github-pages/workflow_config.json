@@ -5,7 +5,7 @@
     "steps": {
       "welcome": {
         "title": "Installation and Setup for Comp 127",
-        "contentFile": "step-welcome.html",
+        "contentFile": "index.html",
         "type": "info",
         "actions": [
           {
